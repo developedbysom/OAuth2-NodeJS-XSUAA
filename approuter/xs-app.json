@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "source": "^/emp",
+      "target": "/",
+      "destination": "emp-dest"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "xsappname": "employee-list",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.read",
+      "description": "Role to read data"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "viewer",
+      "description": "Viewer Role",
+      "scope-references": ["$XSAPPNAME.read"]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "employeeReadRoleCollections",
+      "description": "Employee Role Collection",
+      "role-template-references": ["$XSAPPNAME.viewer"]
+    }
+  ]
+}

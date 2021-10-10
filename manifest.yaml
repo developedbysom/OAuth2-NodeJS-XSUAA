@@ -1,0 +1,32 @@
+applications:
+  # Application
+  - name: employee-list
+    instance: 1
+    path: srv
+    routes:
+      - route: emp-list-9oct.cfapps.us10.hana.ondemand.com
+    memory: 128M
+    timeout: 180
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaa-emp-list
+  #Approuter
+  - name: approuter-emp
+    path: approuter
+    routes:
+      - route: approuter-emp-list-9oct.cfapps.us10.hana.ondemand.com
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaa-emp-list
+    env:
+      destinations: >
+        [
+          {
+            "name": "emp-dest",
+            "url":  "https://emp-list-9oct.cfapps.us10.hana.ondemand.com",            
+            "forwardAuthToken": true
+          }
+        ]

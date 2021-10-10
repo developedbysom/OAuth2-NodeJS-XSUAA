@@ -1,0 +1,14 @@
+{
+  "John Doe": {
+    "ID": 100,
+    "name": "John Doe",
+    "Role": "Tech Arch",
+    "skill": "DevOps Engr"
+  },
+  "Somnath Paul": {
+    "ID": 110,
+    "name": "Somnath Paul",
+    "Role": "Developer",
+    "skill": "ABAP Developer"
+  }
+}
