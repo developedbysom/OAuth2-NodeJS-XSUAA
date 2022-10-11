@@ -1,0 +1,31 @@
+{
+    "xsappname": "providerapp",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.providerScope",
+            "granted-apps": [
+                "$XSAPPNAME(application,xsappforhumanuser)"
+            ],
+            "grant-as-authority-to-apps": [
+                "$XSAPPNAME(application,xsappforclient)"
+            ]
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "providerRoleTemplate",
+            "scope-references": [
+                "$XSAPPNAME.providerScope"
+            ]
+        }
+    ],
+    "role-collections": [
+        {
+            "name": "providerRoleCollections",
+            "role-template-references": [
+                "$XSAPPNAME.providerRoleTemplate"
+            ]
+        }
+    ]
+}

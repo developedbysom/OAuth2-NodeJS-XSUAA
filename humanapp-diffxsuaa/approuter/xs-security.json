@@ -1,0 +1,7 @@
+{
+    "xsappname": "xsappforhumanuser",
+    "tenant-mode": "dedicated",
+    "foreign-scope-references": [
+        "$XSAPPNAME(application,providerapp).providerScope"
+    ]
+}

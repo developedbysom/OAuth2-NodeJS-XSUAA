@@ -1,0 +1,7 @@
+{
+    "xsappname": "xsappforclient",
+    "tenant-mode": "dedicated",
+    "authorities": [
+        "$ACCEPT_GRANTED_AUTHORITIES"
+    ]
+}

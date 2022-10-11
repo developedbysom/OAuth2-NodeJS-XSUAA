@@ -1,0 +1,9 @@
+---
+applications:
+  - name: clientapp
+    random-route: true
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaaforclient

@@ -1,0 +1,8 @@
+---
+applications:
+  - name: providerapp
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaaprovider

@@ -1,0 +1,18 @@
+---
+applications:
+  - name: humanapp2
+    path: approuter
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaaforhuman
+    env:
+      destinations: >
+        [
+            {
+                "url": "https://providerapp.cfapps.us10.hana.ondemand.com",
+                "name": "api-provider",
+                "forwardAuthToken": true
+            }
+        ]

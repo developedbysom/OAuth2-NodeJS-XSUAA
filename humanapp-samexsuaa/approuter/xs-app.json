@@ -1,0 +1,9 @@
+{
+    "routes": [
+        {
+            "source": "^/api",
+            "target": "/",
+            "destination": "api-provider"
+        }
+    ]
+}
