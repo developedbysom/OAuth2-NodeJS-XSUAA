@@ -7,7 +7,7 @@ This open prject for enabling OAuth2 Authentication as well adding scope to user
 
 ```
 git clone https://github.com/developedbysom/OAuth2-NodeJS-XSUAA.git
-cd approter
+cd approuter
 npm i
 cd srv
 npm i
@@ -17,7 +17,7 @@ npm i
 CLI command:
 ```
 cd security
-cf create-service xsuaa application xsuaa-emp-list -c xs-security/json
+cf create-service xsuaa application xsuaa-emp-list -c xs-security.json
 ```
 
 ## To run this application locally:
