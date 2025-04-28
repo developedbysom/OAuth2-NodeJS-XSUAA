@@ -20,5 +20,12 @@
       "description": "Employee Role Collection",
       "role-template-references": ["$XSAPPNAME.viewer"]
     }
-  ]
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "http://*.localhost:4004/**",  
+      "https://approuter-emp-list.cfapps.us10-001.hana.ondemand.com/login/callback",
+      "https://*.applicationstudio.cloud.sap/**"
+    ]
+  }
 }
