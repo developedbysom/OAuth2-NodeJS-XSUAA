@@ -1,10 +1,17 @@
 {
   "xsappname": "employee-list",
-  "tenant-mode": "dedicated",
+  "tenant-mode": "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.read",
       "description": "Role to read data"
+    },
+    {
+      "name":"$XSAPPNAME.TenantProvisioningCallback",
+      "description":"Callback for tenant onboarding, offboarding, get dependencies",
+      "grant-as-authority-to-apps":[
+        "$XSAPPNAME(application,sap-provisioning,tenant-onboarding)"
+      ]
     }
   ],
   "role-templates": [
@@ -24,7 +31,7 @@
   "oauth2-configuration": {
     "redirect-uris": [
       "http://*.localhost:4004/**",  
-      "https://approuter-emp-list.cfapps.us10-001.hana.ondemand.com/login/callback",
+      "https://approuter-emp-list*.cfapps.us10-001.hana.ondemand.com/login/callback",
       "https://*.applicationstudio.cloud.sap/**"
     ]
   }

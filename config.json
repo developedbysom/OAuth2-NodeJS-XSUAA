@@ -1,0 +1,10 @@
+{
+    "xsappname":"employee-list",
+    "appUrls": {
+      "onSubscription" : "https://emp-list-28Apr.cfapps.us10-001.hana.ondemand.com/callback/v1.0/tenants/{tenantId}"
+    },
+    "displayName" : "Employee List MTA",
+    "description" : "Employee List Application",
+    "category" : "Custom SaaS Applications"
+  }
+  

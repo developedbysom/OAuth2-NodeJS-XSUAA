@@ -11,6 +11,7 @@ applications:
       - nodejs_buildpack
     services:
       - xsuaa-emp-list
+      - saas-registry-emp
   #Approuter
   - name: approuter-emp
     path: approuter
@@ -21,7 +22,10 @@ applications:
       - nodejs_buildpack
     services:
       - xsuaa-emp-list
+      
     env:
+
+      TENANT_HOST_PATTERN: 'approuter-emp-list(.*).cfapps.us10-001.hana.ondemand.com'
       destinations: >
         [
           {
